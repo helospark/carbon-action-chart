@@ -1,0 +1,63 @@
+/* 
+Popup 
+Arrows and dropshadows are applied to .popup. Text align is "centered." You'll probably want to set it to "left."
+*/
+.popup {
+  width: 400px;
+  position: fixed;
+  text-align: center;
+  z-index: 999;
+  
+}
+.popup:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 4px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 1px 14px rgba(0,0,0,.2);
+}
+.popup:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  transform: rotate(45deg);
+  box-shadow: 0 1px 14px rgba(0,0,0,.2);
+  background: #fff;
+  position: absolute;
+  z-index: 998;
+}
+/*
+Different arrow positioning
+*/
+.popup.arrow-top:before {
+  left: calc(50% - 10px);
+  top: -8px;
+}
+.popup.arrow-right:before {
+  top: calc(50% - 10px);
+  right: -8px;
+}
+.popup.arrow-bottom:before {
+  left: calc(50% - 10px);
+  bottom: -8px;
+}
+.popup.arrow-left:before {
+  top: calc(50% - 10px);
+  left: -8px;
+}
+
+/* 
+Popup wrapper
+This is where we add the white background and padding of the content within the popup
+*/
+.popup-wrapper {
+  width: 100%;
+  padding: 32px;
+  border-radius: 4px;
+  background: #fff;
+  position: relative;
+  z-index: 998;  
+}
